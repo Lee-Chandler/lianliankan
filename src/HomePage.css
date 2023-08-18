@@ -1,0 +1,33 @@
+.src-video {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 720px;
+    height: 480px;
+    left: 50%;
+    top: 80px;
+    transform: translateX(-50%);
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.jump-btn {
+    width: 300px;
+    height: 100px;
+    border: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    background-image: url('./jump_btn.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    top: 550px;
+}
