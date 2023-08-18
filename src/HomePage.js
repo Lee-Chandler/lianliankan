@@ -3,12 +3,33 @@ import React from 'react';
 import Video from './Video';
 import './HomePage.css';
 import logo from './logo.png';
+import axios from 'axios'; 
+import { useEffect } from 'react';
 const HomePage = () => {
+  let url = ''
+  const [isReady, setIsReady] = React.useState(false);
   const navigateToSecondPage = () => {
-    // 在这里执行路由切换
-    window.location.href = '/second?url=1111';
-    // 或者使用 React Router 的 <Navigate> 组件
+    window.location.href = '/second?url=' + url;
   };
+
+  const getVideoUrl = () => {
+    axios.get('/video').then(res => {
+      console.log(res);
+      return 'res';
+    }).catch(err => {
+      console.log(err);
+      return 'err';
+    })
+  }
+
+  url = getVideoUrl();
+  console.log(url);
+
+  useEffect(() => {
+    if (url) {
+      setIsReady(true);
+    }
+  }, [url]);
 
   return (
     <div>
@@ -16,7 +37,7 @@ const HomePage = () => {
       <div className='src-video'>
         <Video/>
       </div>
-      <button className='jump-btn' onClick={navigateToSecondPage} />
+      {isReady && <button className='jump-btn' onClick={ navigateToSecondPage } />}
     </div>
   );
 };
