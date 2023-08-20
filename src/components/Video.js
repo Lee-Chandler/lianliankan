@@ -1,5 +1,6 @@
 import React, { useState, useRef,useEffect } from 'react';
 import videoFile from './test.mp4';
+import './Video.css';
 
   const Video = (src,paused,onVideoChanged) => {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -23,12 +24,10 @@ import videoFile from './test.mp4';
     setUrl(src);
   }, [src])
   return (
-    <div>
-      <video ref={videoRef} src={videoFile} controls={false} style={{width:'100%',height:'100%',borderRadius:'15px'}}/>
-      <button onClick={()=>{
-        videoButtonCheck()
-      }}></button>
-    </div>
+    <>
+      {/* <video ref={videoRef} src={videoFile}/> */}
+      {url && <video className='video' preload='auto' src={url} controls/>}
+    </>
   );
 }
 

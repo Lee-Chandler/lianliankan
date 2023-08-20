@@ -1,12 +1,14 @@
 .src-video {
-    position: absolute;
+    position: relative;
     display: flex;
-    align-items: center;
-    width: 720px;
-    height: 480px;
-    left: 50%;
-    top: 80px;
-    transform: translateX(-50%);
+    justify-content: center;
+    width: 100%;
+    /* width: 720px;
+    height: 450px; */
+    /* left: 50%; */
+    top: 110px;
+    /* transform: translateX(-50%); */
+    /* margin: 0 auto; */
 }
 
 .logo {
@@ -20,14 +22,15 @@
     width: 300px;
     height: 100px;
     border: none;
-    position: absolute;
+    position: relative;
+    top: 130px;
     left: 50%;
     transform: translateX(-50%);
     background-color: transparent;
-    background-image: url('./jump_btn.png');
+    background-image: url('../assets/jump_btn.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
-    top: 550px;
+    /* top: 550px; */
 }

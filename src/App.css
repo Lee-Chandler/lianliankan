@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.back-btn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  left: 20px;
+  top: 20px;
+  z-index: 2;
+  cursor: pointer;
+  background-image: url('./assets/back_btn.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

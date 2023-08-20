@@ -1,0 +1,5 @@
+.video {
+    max-height: 480px;
+    max-width: 720px;
+    border-radius: 15px;
+}
