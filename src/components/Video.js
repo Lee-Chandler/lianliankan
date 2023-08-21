@@ -1,28 +1,20 @@
-import React, { useState, useRef,useEffect } from 'react';
-import videoFile from './test.mp4';
+import React, { useState, useEffect } from 'react';
+// import videoFile from './test.mp4';
 import './Video.css';
 
-  const Video = (src,paused,onVideoChanged) => {
-    const [isPlaying, setIsPlaying] = useState(false);
-    const videoRef = useRef(null);
+  const Video = (src) => {
+    const url = src.src
+    // const [isPlaying, setIsPlaying] = useState(false);
   
     // useEffect(()=>{
     //   console.log(paused,'666')
     // },[paused])
-    const videoButtonCheck=()=>{
-      if (videoRef.current.paused) {
-        videoRef.current.play();
-        // setIsPlaying(true);
-      } else {
-        videoRef.current.pause();
-        // setIsPlaying(false);
-      }
-    }
-  const [url, setUrl] = useState('');
-  useEffect(() => {
-    console.log(src);
-    setUrl(src);
-  }, [src])
+  // const [url, setUrl] = useState('');
+  // useEffect(() => {
+  //   console.log(src);
+  //   setUrl(src);
+  //   console.log("111:", url)
+  // }, [src])
   return (
     <>
       {/* <video ref={videoRef} src={videoFile}/> */}

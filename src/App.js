@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import { useState } from 'react';
 import HomePage from './components/HomePage';
-import SecondPage from './components/SecondPage';
+import SecondPage from './views/videoPhotoFaceChange/index';
 import axios from 'axios'; 
 import './App.css';
 
@@ -13,6 +13,7 @@ const App = () => {
   const getVideoUrl = async () => {
     try {
       const res = await axios.get('http://localhost:80/video/getOne');
+      // const res = await axios.get('http://localhost:4000/api/srcVid');
       console.log("send request",res.data);
       setUrl(res.data.url);
     } catch (err) {

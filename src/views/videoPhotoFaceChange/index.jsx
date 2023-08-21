@@ -1,15 +1,17 @@
 import React, { useState,useRef,useEffect } from 'react';
 import './style.css'
-import videoFile from '../../test.mp4';
+// import videoFile from '../../assets/test.mp4';
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
 import { Button,Progress } from 'antd';
 
-const SecondPage = () => {
+const SecondPage = (props) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [percent, setPercent] = useState(0);
   const videoRef1 = useRef(null);
   const videoRef2 = useRef(null);
+  const videoFile = props.url;
+  console.log("second page:", videoFile)
 
   useEffect(()=>{
     if(!selectedFile||selectedFile===0){
